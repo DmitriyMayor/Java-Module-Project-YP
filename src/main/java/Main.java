@@ -10,7 +10,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 3; i++) {
+        int carsNumber = 3;
+
+        for (int i = 1; i <= carsNumber; i++) {
             System.out.println("Введите название машины № " + i);
             name = scanner.next();
             while (true) {
@@ -26,7 +28,10 @@ public class Main {
                         System.out.println("Некорректный ввод! Введите целое число.");
                 }
 
-                if (speed < 250 && speed > 0) {
+                int maxSpeed = 250;
+                int minSpeed = 0;
+
+                if (maxSpeed >= speed && speed > minSpeed) {
                     break;
                 }
                 System.out.println("Некорректная скорость, повторите ввод!");
